@@ -1,7 +1,7 @@
 # vzaletny_platform
 vzaletny Platform repository
 <details>
-<summary> # Выполнено ДЗ №2 </summary>
+<summary></b>Выполнено ДЗ №2</b></summary>
 
  - [ ] Основное ДЗ
  - [ ] Задание со *
