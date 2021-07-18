@@ -11,20 +11,24 @@ vzaletny Platform repository
 Kubelet отслеживает состояние PODs и в случае отсутсвия от них heartbits (livenessProbe), запускает их заново;
 
  - Пункт 1:
-    - Уcтановлен kubectl;
-    - Установлен minikube;
-    - Cоздан Dockerfile, в котором будет описан образ web сервера на nginx;
-    - Cобран докер образ и размешен в Container Registry Docker Hub;
-    - Создан манифест web-pod.yaml;
+    - Уcтановлен kubectl
+    - Установлен minikube
+    - Cоздан Dockerfile, в котором описан образ web сервера на nginx
+    - Cобран докер образ и размещен в Container Registry Docker Hub
+    - Создан манифест web-pod.yaml
+
  - Пункт 2:
-    - Собран и запушен образ Hipster Shop
+    - Собран и загружен образ Hipster Shop
     - Сгенерирован frontend-pod-healthy.yaml
+    - После исправления файла frontend-pod-healthy.yaml pod в статусе Running	
 
 ## Как запустить проект:
- - Например, запустить команду X в директории Y
+ - Создать манифест файл web-pod.yaml
+ - Создать pod командой kubectl apply -f web-pod.yaml;
 
 ## Как проверить работоспособность:
- - Например, перейти по ссылке http://localhost:8080
+ - Настроить форвардинг портов для pod коммандой: kubectl port-forward --address 0.0.0.0 pod/web 8000:8000
+ - Перейти по ссылке http://localhost:8000
 
 ## PR checklist:
  - [ ] Выставлен label с темой домашнего задания
