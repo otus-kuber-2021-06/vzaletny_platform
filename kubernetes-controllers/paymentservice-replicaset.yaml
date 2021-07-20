@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: payment_service
+  labels:
+    app: payment_service
+    tier: payment_service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: payment_service
+  template:
+    metadata:
+      labels:
+        app: payment_service
+        tier: payment_service
+    spec:
+      containers:
+      - name: payment
+        image: vzaletny/hipster_shop_payment:v0.0.1
